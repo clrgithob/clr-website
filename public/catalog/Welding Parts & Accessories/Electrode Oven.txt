@@ -1,0 +1,17 @@
+MODEL: PEO‑1
+SPECIFICATIONS:
+- Capability: 5 kg
+- Length: 500 mm
+- Power: 500–190 W
+- Temperature: 150 °C
+- Voltage: AC 240 V
+- Net Weight: 3.8 kg
+
+MODEL: PEO‑2
+SPECIFICATIONS:
+- Capability: 10 kg
+- Length: 500 mm
+- Power: 600–240 W
+- Temperature: 150 °C
+- Voltage: AC 240 V
+- Net Weight: 5.3 kg

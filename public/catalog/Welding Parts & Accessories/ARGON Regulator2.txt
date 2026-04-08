@@ -1,0 +1,7 @@
+MODEL: ARGON REGULATOR – PAR-626B
+
+- Body & Stem: Full brass construction for durability and corrosion resistance
+- Max. Input Pressure: 15 MPa (approx. 250 kg/cm²)
+- Max. Output Pressure: 0.3 MPa (approx. 0.35 MPa)
+- Flow Rate (Flux): Up to 25 L/min or 0.25 L/min depending on configuration
+- Features: Built-in flowmeter for real-time monitoring of gas deliver

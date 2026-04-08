@@ -1,0 +1,18 @@
+MODEL: PDP 1720
+
+- Spindle Taper (A): MT3
+- Maximum Drilling Capacity: 25 mm
+- Maximum Spindle Travel: 80 mm
+- Swing: 432 mm
+- Max. Distance (Spindle to Table): 710 mm
+- Max. Distance (Spindle to Base): 1,200 mm
+- Size of Table: 356 × 356 mm
+- Table Tilt: 45°
+- Size of Base: 498 × 285 mm
+- Overall Height: 1,635 mm
+- Number of Speeds: 16
+- Range of Speeds: 160–3,000 rpm
+- Motor Size (230V, 60Hz): 1.5 HP
+- Chuck Capacity: 20 mm × JT3
+- Net Weight: 85 kg
+- Gross Weight: 90 kg

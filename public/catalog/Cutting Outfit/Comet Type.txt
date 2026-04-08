@@ -1,0 +1,16 @@
+MODEL: PCWO 700
+TYPE: Cutting Outfit (Comet Type)
+TOOL BOX INCLUDES:
+- 1 pc: Oxygen Regulator POR 700
+- 1 pc: Acetylene Regulator PAR 700
+- 1 pc: Cutting Attachment PCA 700
+- 1 pc: Blow Pipe PBP 700
+- 1 pc: Mixer PMIX 700
+- 2 pcs: Cutting Tip PCT #8
+- 2 pcs: Welding Tip PWT #8, 10 & 12
+- 2 pcs: Twin Hose PTH
+- 1 pc: Flint Lighter PFL
+- 1 set: Tip Cleaner PTC
+- 1 pc: Safety Goggles PSG 001
+- 1 set: Tool Box PTB 001
+- 1 pc: Operating Manual

@@ -1,0 +1,6 @@
+BLOWER
+AEG GM 600E
+Power input 600 watts
+No-load Speed 0-16,000 rpm
+Air volume 0-2.8 mCu
+Weight 0.6 kg

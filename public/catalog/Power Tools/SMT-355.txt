@@ -1,0 +1,7 @@
+CUT OFF MACHINE
+AEG SMT 355
+Power Input 2,300 watts
+No-load Speed 3,800 rpm
+Wheel diameter 355mm
+Bore Diameter 25.4 mm
+Weight 16.5 kg

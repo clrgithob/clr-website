@@ -1,0 +1,10 @@
+MODEL: Powercraft Magnetic Pipe Cutter CG2-11
+WEIGHT: 7.0 kg
+ONE TORCH W/BODY: 9.5 kg
+DIMENSION: 350 × 140 × 175 mm
+WHEEL DISTANCE: 160 mm
+REDUCTION GEAR: Single cone system
+CUTTING SPEED: 150–800 mm/min
+CUTTING EDGE SHAPE: I, V (45°)
+CUTTING THICKNESS: 5–30 mm (with standard accessories)
+MOTOR SPEED: 1,500 rpm

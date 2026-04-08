@@ -1,65 +1,122 @@
-import Image from "next/image";
+import fs from 'fs';
+import path from 'path';
+import ClientPage from './ClientPage';
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+  const catalogDir = path.join(process.cwd(), 'public', 'catalog');
+  let categories = [];
+
+  const defaultCategories = [
+    "Welding Machines",
+    "Personal Protective Equipment (PPE)",
+    "Scaffolding",
+    "Power Tools",
+    "Welding Gloves",
+    "Air Compressors"
+  ];
+
+  if (!fs.existsSync(catalogDir)) {
+    fs.mkdirSync(catalogDir, { recursive: true });
+    defaultCategories.forEach(cat => {
+      fs.mkdirSync(path.join(catalogDir, cat), { recursive: true });
+    });
+  }
+
+  const folders = fs.readdirSync(catalogDir, { withFileTypes: true })
+    .filter(dirent => dirent.isDirectory())
+    .map(dirent => dirent.name);
+
+  folders.forEach(folder => {
+    const folderPath = path.join(catalogDir, folder);
+    const folderContents = fs.readdirSync(folderPath, { withFileTypes: true });
+
+    let sections = [];
+    let coverImage = "";
+    let generalItems = [];
+
+    // --- NEW: Read category description if it exists ---
+    let categoryDescription = "";
+    const catDescPath = path.join(folderPath, 'description.txt');
+    if (fs.existsSync(catDescPath)) {
+      categoryDescription = fs.readFileSync(catDescPath, 'utf8');
+    } else if (folder === "Air Compressors") {
+      // Your requested 5-line description for Air Compressors
+      categoryDescription = "Reliable pneumatic power systems for efficient coating, painting, and continuous tool operation.\nWe provide high-capacity, rapid-recovery air compressors for demanding commercial workflows.\nOur inventory includes stationary units, portable job-site compressors, and specialized hoses.\nBuilt to deliver consistent CFM and PSI to keep your production lines moving.\nEquip your facility with the industry's most trusted pneumatic power sources.";
+    } else {
+      categoryDescription = `Browse our complete inventory of ${folder}. Click to view available specifications and images.`;
+    }
+
+    folderContents.filter(dirent => dirent.isFile()).forEach(fileDirent => {
+      const file = fileDirent.name;
+      if (file.endsWith('.png') || file.endsWith('.jpg') || file.endsWith('.jpeg')) {
+        const baseName = path.parse(file).name;
+        const txtPath = path.join(folderPath, `${baseName}.txt`);
+        
+        let description = "No description provided.";
+        if (fs.existsSync(txtPath)) {
+          description = fs.readFileSync(txtPath, 'utf8');
+        }
+
+        generalItems.push({
+          id: baseName,
+          imagePath: `/catalog/${folder}/${file}`,
+          description: description
+        });
+
+        if (!coverImage) coverImage = `/catalog/${folder}/${file}`;
+      }
+    });
+
+    if (generalItems.length > 0) {
+      sections.push({ title: "General", items: generalItems });
+    }
+
+    folderContents.filter(dirent => dirent.isDirectory()).forEach(subDirDirent => {
+      const subDir = subDirDirent.name;
+      const subDirPath = path.join(folderPath, subDir);
+      const subFiles = fs.readdirSync(subDirPath);
+
+      let subItems = [];
+      
+      subFiles.forEach(file => {
+        if (file.endsWith('.png') || file.endsWith('.jpg') || file.endsWith('.jpeg')) {
+          const baseName = path.parse(file).name;
+          const txtPath = path.join(subDirPath, `${baseName}.txt`);
+          
+          let description = "No description provided.";
+          if (fs.existsSync(txtPath)) {
+            description = fs.readFileSync(txtPath, 'utf8');
+          }
+
+          subItems.push({
+            id: `${subDir}-${baseName}`,
+            imagePath: `/catalog/${folder}/${subDir}/${file}`,
+            description: description
+          });
+
+          if (!coverImage) coverImage = `/catalog/${folder}/${subDir}/${file}`;
+        }
+      });
+
+      if (subItems.length > 0) {
+        sections.push({ title: subDir, items: subItems });
+      }
+    });
+
+    let totalItems = 0;
+    sections.forEach(sec => {
+      totalItems += sec.items.length;
+    });
+
+    categories.push({
+      id: folder,
+      title: folder,
+      coverImage: coverImage,
+      description: categoryDescription,
+      totalItems: totalItems,
+      sections: sections
+    });
+  });
+
+  return <ClientPage categories={categories} />;
 }

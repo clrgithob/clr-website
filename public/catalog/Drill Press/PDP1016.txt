@@ -1,0 +1,18 @@
+MODEL: PDP 1016
+
+- Spindle Taper (A): MT2
+- Maximum Drilling Capacity: 16 mm
+- Maximum Spindle Travel: 80 mm
+- Swing: 250 mm
+- Max. Distance (Spindle to Table): 345 mm
+- Max. Distance (Spindle to Base): 465 mm
+- Size of Table: 208 × 208 mm
+- Table Tilt: 45°
+- Size of Base: 320 × 195 mm
+- Overall Height: 840 mm
+- Number of Speeds: 12
+- Range of Speeds: 280–3,000 rpm
+- Motor Size (230V, 60Hz): 1/2 HP
+- Chuck Capacity: 16 mm × JT3
+- Net Weight: 35 kg
+- Gross Weight: 38 kg

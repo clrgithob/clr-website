@@ -1,0 +1,15 @@
+MODEL: PTAD 315PHD
+TYPE: AC/DC TIG Pulse Welding Machine
+INPUT VOLTAGE: 220V AC (Single)
+TIG DC Pulse (Low-Freq): 2–45 Hz
+TIG DC Pulse (Hi-Freq): 45–450 Hz
+Duty Ratio (D/R): 50%
+Base Current: 20A–250A
+TIG AC Frequency: 60 Hz
+TIG AC Duty Ratio (PW): 30–60%
+Down Slope: 0–5 seconds
+Post Gas: 0–5 seconds
+OUTPUT CURRENT (TIG DC): 20–250A
+OUTPUT CURRENT (TIG DC Pulse): 20–250A
+OUTPUT CURRENT (TIG AC): 20–250A
+NO LOAD VOLTAGE (Valid): 50V ±5V

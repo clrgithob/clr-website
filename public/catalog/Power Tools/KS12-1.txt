@@ -1,0 +1,10 @@
+184mm CIRCULAR SAW
+AEG KS12-1 1200W
+Power input 1,200 watts
+No-load Speed 5,500 rpm
+Bore Size 20mm
+Max. Depth of Cut 45° 42mm
+Blade Size 184mm
+Max. Depth of Cut 90° 60mm
+Max. Bevel Capacity 45°
+Weight 5.4 kg

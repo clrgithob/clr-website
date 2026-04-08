@@ -1,0 +1,6 @@
+MODEL: ARGON REGULATOR – PAR-ECO
+
+- Output Pressure: 0.35 MPa
+- Outlet Diameter: 1/4 NPT
+- Max. Output Flow Rate: 0.25 L/min
+- Max. Input Pressure: 250 kg/cm²
