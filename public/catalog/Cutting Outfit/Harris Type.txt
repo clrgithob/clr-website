@@ -1,0 +1,17 @@
+MODEL: PCWO 303
+TYPE: Cutting Outfit (Harris Type – Innova Series)
+TOOL BOX INCLUDES:
+- 1 pc: Oxygen Regulator POR 300
+- 1 pc: Acetylene Regulator PAR 300
+- 1 pc: Cutting Attachment PCA 303
+- 1 pc: Blow Pipe PBP 300
+- 1 pc: Mixer PMIX 300
+- 2 pcs: Cutting Tip PCT #2 (LPG) & #2 (Acetylene)
+- 2 pcs: Welding Tip PWT #1 & #3
+- 2 pcs: Flash Guard 701201 OXY & 701201 ACEY
+- 1 pc: LPG Adapter LPGA
+- 1 set: Twin Hose PTH5
+- 1 pc: Flint Lighter PFL
+- 1 set: Tip Cleaner PCT
+- 1 pc: Safety Goggles PSG 001
+- 1 pc: Multi Wrench SW 1

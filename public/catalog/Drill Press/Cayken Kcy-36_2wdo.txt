@@ -1,0 +1,20 @@
+
+MODEL: Cayken Kcy-36_2wdo
+
+- Core Drill Diameter: Φ36 mm
+- Twist Drill Diameter: Φ18 mm
+- Tapping Diameter: M18
+- Rated Voltage: 110 / 220V ~
+- Rated Frequency: 50–60 Hz
+- Rated Input Power: 1550 W
+- No-load Speed: 320 / 580 rpm
+- Max. Magnetic Attraction: 14,200 N
+- Cutting Depth: 30 mm
+- Stroke: ≤220 mm
+- Cable Length: 2.5 m
+- Net / Gross Weight: ≤13 / 18.2 kg
+- Packing Size: 58 × 17 × 37 cm
+- Packing Material: Plastic
+- Shank Type: Quickin / Weldon / MT2
+
+

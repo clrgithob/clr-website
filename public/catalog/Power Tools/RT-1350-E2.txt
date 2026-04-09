@@ -1,0 +1,7 @@
+ROUTER
+AEG RT 1350E
+Power input 1350 watts
+No-load speed 15,000-26,000 rpm
+Plunge capacity 50 mm
+Collet capacity 1/4″ / 1/2″
+Weight 4 kg

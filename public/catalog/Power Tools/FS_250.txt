@@ -1,0 +1,7 @@
+250W 1/3 SHEET SANDER
+AEG FS 250
+Power input 250 watts
+No-load speed 6000-12,000opm
+Orbit Diameter 2.0 mm
+Pad Dimensions 90 x 187mm
+Weight 1.8 kg

@@ -1,0 +1,10 @@
+MODEL: PCMD‑42HD
+
+- Voltage: 220V ~
+- Power Unit: 1700 W
+- Max. Magnetic Attraction: 15,600 N
+- No‑load Speed: 100–690 rpm
+- Annular Cutter (Intermittent Use): 42 mm
+- Annular Cutter (Continuous Use): 35 mm
+- Maximum Twist Drill Capacity: 19 mm
+- Magnetic Adhesion: 15,600 N

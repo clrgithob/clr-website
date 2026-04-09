@@ -1,0 +1,8 @@
+PLANER
+AEG PL 750A
+Power input 750 watts
+No-load Speed 16,000 rpm
+Cutting depth 2 mm
+Cutting width 82 mm
+Max. Rebate 12 mm
+Weight 3.2 kg

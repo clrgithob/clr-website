@@ -1,0 +1,4 @@
+MODEL: JCC500A
+SPECIFICATIONS:
+- Type: Japanese
+- Rated Current Capacity: 500 Amperes

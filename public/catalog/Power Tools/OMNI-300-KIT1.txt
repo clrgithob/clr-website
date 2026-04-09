@@ -1,0 +1,6 @@
+MULTI-TOOL
+AEG OMNI 300KiT1
+Power input 300 watts
+Oscillation rate 2000 rpm
+Oscillation angle left/right (4) 1.5⁰
+Weight 1.5 kg
